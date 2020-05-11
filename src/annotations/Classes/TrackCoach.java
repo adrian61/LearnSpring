@@ -7,9 +7,19 @@ import org.springframework.stereotype.Component;
 public class TrackCoach implements Coach {
     private FortuneService fortuneService;
 
+//    @Autowired
+//    public TrackCoach(FortuneService theFortuneService) {
+//        fortuneService = theFortuneService;
+//    }
+
+
+    public TrackCoach() {
+    }
+    
     @Autowired
-    public TrackCoach(FortuneService theFortuneService) {
-        fortuneService = theFortuneService;
+    public void setFortuneService(FortuneService fortuneService) {
+        System.out.println("set method");
+        this.fortuneService = fortuneService;
     }
 
     @Override
@@ -21,4 +31,6 @@ public class TrackCoach implements Coach {
     public String getDailyFortune() {
         return fortuneService.getFortune();
     }
+
+
 }
