@@ -32,6 +32,11 @@ public class TrackCoach implements Coach {
         return "track Coach here!";
     }
 
+    @PostConstruct
+    public void doSomething (){
+
+    }
+
     @Override
     public String getDailyFortune() {
         return fortuneService.getFortune();
