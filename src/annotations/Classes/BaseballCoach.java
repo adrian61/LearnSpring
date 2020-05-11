@@ -11,6 +11,13 @@ public class BaseballCoach implements Coach {
     @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
 
+    @Autowired
+    public BaseballCoach(@Qualifier("randomFortuneService") FortuneService theFortuneService) {
+
+        System.out.println(">> TennisCoach: inside constructor using @autowired and @qualifier");
+
+        fortuneService = theFortuneService;
+    }
 
 
 
