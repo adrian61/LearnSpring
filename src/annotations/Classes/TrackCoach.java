@@ -15,7 +15,7 @@ public class TrackCoach implements Coach {
 
     public TrackCoach() {
     }
-    
+
     @Autowired
     public void setFortuneService(FortuneService fortuneService) {
         System.out.println("set method");
