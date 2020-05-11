@@ -1,4 +1,4 @@
-package springdemo;
+package beanScopeAndLifecycle.Classes;
 
 public class HappyFortuneService implements FortuneService {
 

@@ -1,11 +1,11 @@
-package springdemo.App;
+package beanScopeAndLifecycle.App;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import springdemo.Coach;
+import beanScopeAndLifecycle.Classes.Coach;
 
-public class BeanScopeDemoApp {
+public class BeanLifeCycleDemoApp {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScope-applicationContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScopeAndLifecycle/beanLifeCycle-applicationContext.xml");
 
         Coach theCoach = context.getBean("myCoach", Coach.class);
 

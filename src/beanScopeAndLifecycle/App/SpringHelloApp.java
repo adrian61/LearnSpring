@@ -1,12 +1,12 @@
-package springdemo.App;
+package beanScopeAndLifecycle.App;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import springdemo.Coach;
+import beanScopeAndLifecycle.Classes.Coach;
 
 public class SpringHelloApp {
     public static void main(String[] args) {
         //load the spring config file
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScopeAndLifecycle/applicationContext.xml");
         // retrieve bean from spring container
         Coach theCoach = context.getBean("myCoach", Coach.class);
         // call methods on the bean

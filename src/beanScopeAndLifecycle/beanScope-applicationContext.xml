@@ -5,10 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- define the dependency -->
-    <bean id="myFortuneService" class="springdemo.HappyFortuneService">
+    <bean id="myFortuneService" class="beanScopeAndLifecycle.Classes.HappyFortuneService">
     </bean>
 
-    <bean id="myCoach" class="springdemo.TrackCoach" scope="prototype">
+    <bean id="myCoach" class="beanScopeAndLifecycle.Classes.TrackCoach" scope="prototype">
         <constructor-arg ref="myFortuneService"/>
     </bean>
 

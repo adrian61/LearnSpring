@@ -4,17 +4,17 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
     <!-- load properties file -->
-    <context:property-placeholder location="classpath:sport.properties"/>
+    <context:property-placeholder location="classpath:beanScopeAndLifecycle/sport.propertiesecycle/sport.properties"/>
     <!-- define the dependency -->
-    <bean id="myFortuneService" class="springdemo.HappyFortuneService">
+    <bean id="myFortuneService" class="beanScopeAndLifecycle.Classes.HappyFortuneService">
     </bean>
 
-    <bean id="myCoach" class="springdemo.TrackCoach">
+    <bean id="myCoach" class="beanScopeAndLifecycle.Classes.TrackCoach">
         <!-- set up constructor injection -->
         <constructor-arg ref="myFortuneService"/>
     </bean>
 
-    <bean id="myCricketCoach" class="springdemo.CricketCoach">
+    <bean id="myCricketCoach" class="beanScopeAndLifecycle.Classes.CricketCoach">
         <!-- set up setter method injection -->
         <property name="fortuneService" ref="myFortuneService"/>
         <property name="emailAddress" value="${email}"/>

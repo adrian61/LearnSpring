@@ -1,4 +1,4 @@
-package springdemo;
+package beanScopeAndLifecycle.Classes;
 
 public class CricketCoach implements Coach {
 

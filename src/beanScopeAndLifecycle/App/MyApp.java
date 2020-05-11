@@ -1,7 +1,7 @@
-package springdemo.App;
+package beanScopeAndLifecycle.App;
 
-import springdemo.Coach;
-import springdemo.TrackCoach;
+import beanScopeAndLifecycle.Classes.Coach;
+import beanScopeAndLifecycle.Classes.TrackCoach;
 
 public class MyApp {
     public static void main(String[] args) {

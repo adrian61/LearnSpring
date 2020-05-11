@@ -1,7 +1,7 @@
-package springdemo.App;
+package beanScopeAndLifecycle.App;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import springdemo.CricketCoach;
+import beanScopeAndLifecycle.Classes.CricketCoach;
 
 public class SetterDemoApp {
 
@@ -9,7 +9,7 @@ public class SetterDemoApp {
 
         // load the spring configuration file
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+                new ClassPathXmlApplicationContext("beanScopeAndLifecycle/applicationContext.xml");
 
         // retrieve bean from spring container
         CricketCoach theCoach = context.getBean("myCricketCoach", CricketCoach.class);

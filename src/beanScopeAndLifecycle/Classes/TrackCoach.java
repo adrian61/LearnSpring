@@ -1,4 +1,4 @@
-package springdemo;
+package beanScopeAndLifecycle.Classes;
 
 public class TrackCoach implements Coach {
     //define a private filed for the dependency
