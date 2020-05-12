@@ -5,9 +5,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
 //@Scope("singleton")
-@Scope("prototype")
+//@Scope("prototype") must be commented if used @PreDestroy
 public class TrackCoach implements Coach {
     private FortuneService fortuneService;
 
@@ -34,7 +37,12 @@ public class TrackCoach implements Coach {
 
     @PostConstruct
     public void doSomething (){
+        System.out.println("post construct");
+    }
 
+    @PreDestroy
+    public void doSomethingDestroy (){
+        System.out.println("pre destroy");
     }
 
     @Override
