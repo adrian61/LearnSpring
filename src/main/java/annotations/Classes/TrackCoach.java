@@ -2,7 +2,6 @@ package annotations.Classes;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -36,12 +35,12 @@ public class TrackCoach implements Coach {
     }
 
     @PostConstruct
-    public void doSomething (){
+    public void doSomething() {
         System.out.println("post construct");
     }
 
     @PreDestroy
-    public void doSomethingDestroy (){
+    public void doSomethingDestroy() {
         System.out.println("pre destroy");
     }
 
